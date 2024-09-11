@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mysql:8.0
+    platform: linux/amd64
+    command: >-
+      mysqld
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --sql-mode='TRADITIONAL,NO_AUTO_VALUE_ON_ZERO,ONLY_FULL_GROUP_BY'
+      --max_connections=10000
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - data80:/var/lib/mysql
+    ports:
+      - "3316:3306"
+volumes:
+  data80:
+    driver: local
