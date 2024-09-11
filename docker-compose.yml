@@ -10,10 +10,5 @@ services:
       --max_connections=10000
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-    volumes:
-      - data80:/var/lib/mysql
     ports:
       - "3316:3306"
-volumes:
-  data80:
-    driver: local
