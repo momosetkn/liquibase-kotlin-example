@@ -1,5 +1,7 @@
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") version "2.0.20"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    application
 }
 
 group = "momosetkn"
@@ -10,18 +12,18 @@ repositories {
     maven { url = uri("https://jitpack.io") }
 }
 
+application {
+    mainClass = "MainKt"
+}
+
 dependencies {
-    val liquibaseKotlinVersion = "0.3.2"
-    // You can choose to install either kotlin-script or kotlin-typesafe.
-    // for kotlin-script
+    implementation("org.liquibase:liquibase-core:4.29.2")
+    implementation("com.mysql:mysql-connector-j:9.0.0")
+    implementation("org.slf4j:slf4j-simple:2.0.16")
+
+    val liquibaseKotlinVersion = "0.3.3"
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-parser:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-serializer:$liquibaseKotlinVersion")
-    // If you want to use call liquibase-command by kotlin, add the following code.
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-client:$liquibaseKotlinVersion")
-
-    implementation("com.mysql:mysql-connector-j:9.0.0")
-    implementation("info.picocli:picocli:4.7.6")
-
-
 }
