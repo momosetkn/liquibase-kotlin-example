@@ -1,5 +1,5 @@
 # liquibase-kotlin-example
-example of Liquibase-kotlin
+example of [Liquibase-kotlin](https://github.com/momosetkn/liquibase-kotlin)
 
 ## Example of liquibase-kotlin-script and liquibase-kotlin-client
 
