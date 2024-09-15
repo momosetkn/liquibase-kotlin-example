@@ -16,6 +16,7 @@ application {
     mainClass = "MainKt"
 }
 
+
 dependencies {
     implementation("org.liquibase:liquibase-core:4.29.2")
     implementation("com.mysql:mysql-connector-j:9.0.0")
@@ -23,7 +24,19 @@ dependencies {
 
     val liquibaseKotlinVersion = "0.4.0-rc-1"
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
+    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-client:$liquibaseKotlinVersion")
+    // typesafe
+    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-typesafe-parser:$liquibaseKotlinVersion")
+    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-typesafe-serializer:$liquibaseKotlinVersion")
+    // script
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-parser:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-serializer:$liquibaseKotlinVersion")
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-client:$liquibaseKotlinVersion")
+
+}
+
+// if you want to use multiple liquibase-parser, add bellow code.
+tasks {
+    withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+        mergeServiceFiles()
+    }
 }

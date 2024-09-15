@@ -5,7 +5,7 @@ fun main() {
     val connectionUrl = "jdbc:mysql://localhost:3316"
     val username = "root"
     val password = ""
-    val databaseName = "liquibase-kotlin-script-example"
+    val databaseName = "liquibase-kotlin-script-example" + System.currentTimeMillis()
     Class.forName("com.mysql.cj.jdbc.Driver")
     DriverManager.getConnection(connectionUrl, username, password).use { connection ->
         connection.createStatement().use { statement ->
@@ -17,7 +17,7 @@ fun main() {
         url = "$connectionUrl/$databaseName",
         username = username,
         password = password,
-        changelogFile = "changelogs/db.changelog-all.kts",
+        changelogFile = "typesafechangelogs/db.changelog-all.kts",
     )
     exitProcess(0) // shutdown for LiquibaseCommandExecutor
 }

@@ -21,7 +21,7 @@ dependencies {
     implementation("com.mysql:mysql-connector-j:9.0.0")
     implementation("org.slf4j:slf4j-simple:2.0.16")
 
-    val liquibaseKotlinVersion = "0.3.3"
+    val liquibaseKotlinVersion = "0.4.0-rc-1"
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-typesafe-parser:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-typesafe-serializer:$liquibaseKotlinVersion")

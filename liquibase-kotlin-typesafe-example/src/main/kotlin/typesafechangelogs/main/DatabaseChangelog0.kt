@@ -1,4 +1,4 @@
-package changelogs.main
+package typesafechangelogs.main
 
 import momosetkn.liquibase.kotlin.parser.KotlinTypesafeDatabaseChangeLog
 

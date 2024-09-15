@@ -1,7 +1,7 @@
-package changelogs
+package typesafechangelogs
 
 import momosetkn.liquibase.kotlin.parser.KotlinTypesafeDatabaseChangeLog
 
 class DatabaseChangelogAll : KotlinTypesafeDatabaseChangeLog({
-    includeAll("changelogs.main")
+    includeAll("typesafechangelogs.main")
 })

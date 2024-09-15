@@ -1,3 +1,0 @@
-databaseChangeLog {
-    includeAll("changelogs/main/")
-}
