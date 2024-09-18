@@ -17,7 +17,7 @@ fun main() {
         url = "$connectionUrl/$databaseName",
         username = username,
         password = password,
-        changelogFile = typesafechangelogs.DatabaseChangelogAll::class.qualifiedName + ".kt",
+        changelogFile = typesafechangelogs.DatabaseChangelogAll::class.qualifiedName!!,
     )
     exitProcess(0) // shutdown for LiquibaseCommandExecutor
 }

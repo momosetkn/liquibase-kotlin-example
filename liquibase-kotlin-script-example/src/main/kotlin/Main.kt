@@ -17,7 +17,7 @@ fun main() {
         url = "$connectionUrl/$databaseName",
         username = username,
         password = password,
-        changelogFile = "typesafechangelogs/db.changelog-all.kts",
+        changelogFile = "scriptchangelogs/db.changelog-all.kts",
     )
     exitProcess(0) // shutdown for LiquibaseCommandExecutor
 }
