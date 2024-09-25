@@ -1,14 +1,14 @@
-package typesafechangelogs.main
+package compiledchangelogs.main
 
-import momosetkn.liquibase.kotlin.parser.KotlinTypesafeDatabaseChangeLog
+import momosetkn.liquibase.kotlin.parser.KotlinCompiledDatabaseChangeLog
 
-class DatabaseChangelog0 : KotlinTypesafeDatabaseChangeLog({
+class DatabaseChangelog0 : KotlinCompiledDatabaseChangeLog({
     changeSet(author = "momose (generated)", id = "200-0") {
-        tagDatabase("started_typesafe")
+        tagDatabase("started_compiled")
     }
 
     changeSet(author = "momose (generated)", id = "200-10") {
-        createTable(tableName = "company_typesafe") {
+        createTable(tableName = "company_compiled1") {
             column(name = "id", type = "UUID") {
                 constraints(nullable = false, primaryKey = true)
             }

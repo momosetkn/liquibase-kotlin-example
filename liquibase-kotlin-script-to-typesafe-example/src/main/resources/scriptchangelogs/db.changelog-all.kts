@@ -1,4 +1,4 @@
 databaseChangeLog {
-    includeAll("scriptchangelogs/main/")
-    include("typesafechangelogs/DatabaseChangelogAll.class")
+    includeAll("compiledchangelogs/main/")
+//    include("compiledchangelogs/DatabaseChangelogAll.class")
 }

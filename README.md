@@ -9,26 +9,26 @@ gradle shadowJar
 java -jar build/libs/*.jar
 ```
 
-## Example of liquibase-kotlin-typesafe and liquibase-kotlin-client
+## Example of liquibase-kotlin-compiled and liquibase-kotlin-client
 
 ```
-cd liquibase-kotlin-typesafe-example
+cd liquibase-kotlin-compiled-example
 gradle shadowJar
 java -jar build/libs/*.jar
 ```
 
-## Example of liquibase-kotlin-script to liquibase-kotlin-typesafe and liquibase-kotlin-client
+## Example of liquibase-kotlin-script to liquibase-kotlin-compiled and liquibase-kotlin-client
 
 ```
-cd liquibase-kotlin-script-to-typesafe-example
+cd liquibase-kotlin-script-to-compiled-example
 gradle shadowJar
 java -jar build/libs/*.jar
 ```
 
-## Example of liquibase-kotlin-typesafe to liquibase-kotlin-script and liquibase-kotlin-client
+## Example of liquibase-kotlin-compiled to liquibase-kotlin-script and liquibase-kotlin-client
 
 ```
-cd liquibase-kotlin-typesafe-to-script-example
+cd liquibase-kotlin-compiled-to-script-example
 gradle shadowJar
 java -jar build/libs/*.jar
 ```

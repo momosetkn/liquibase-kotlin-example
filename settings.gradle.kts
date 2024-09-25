@@ -1,4 +1,4 @@
 include("liquibase-kotlin-script-example")
-include("liquibase-kotlin-typesafe-example")
-include("liquibase-kotlin-typesafe-to-script-example")
-include("liquibase-kotlin-script-to-typesafe-example")
+include("liquibase-kotlin-compiled-example")
+include("liquibase-kotlin-compiled-to-script-example")
+include("liquibase-kotlin-script-to-compiled-example")

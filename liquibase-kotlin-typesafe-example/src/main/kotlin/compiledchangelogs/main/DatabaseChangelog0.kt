@@ -1,8 +1,8 @@
-package typesafechangelogs.main
+package compiledchangelogs.main
 
-import momosetkn.liquibase.kotlin.parser.KotlinTypesafeDatabaseChangeLog
+import momosetkn.liquibase.kotlin.parser.KotlinCompiledDatabaseChangeLog
 
-class DatabaseChangelog0 : KotlinTypesafeDatabaseChangeLog({
+class DatabaseChangelog0 : KotlinCompiledDatabaseChangeLog({
     changeSet(author = "momose (generated)", id = "1715520327312-0") {
         tagDatabase("started")
     }

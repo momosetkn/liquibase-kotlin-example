@@ -12,7 +12,8 @@ fun main() {
             statement.executeUpdate("CREATE DATABASE IF NOT EXISTS `$databaseName`")
         }
     }
-    momosetkn.liquibase.client.LiquibaseClient.update(
+    val client = momosetkn.liquibase.client.LiquibaseClient {}
+    client.update(
         driver = "com.mysql.cj.jdbc.Driver",
         url = "$connectionUrl/$databaseName",
         username = username,
