@@ -13,6 +13,7 @@ group = "momosetkn"
 version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
+    mavenLocal()
     maven { url = uri("https://jitpack.io") }
 }
 

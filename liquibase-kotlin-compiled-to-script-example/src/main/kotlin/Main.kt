@@ -1,3 +1,5 @@
+import momosetkn.liquibase.client.LiquibaseDatabaseFactory
+import momosetkn.liquibase.client.configureLiquibase
 import java.sql.DriverManager
 import kotlin.system.exitProcess
 
@@ -12,13 +14,23 @@ fun main() {
             statement.executeUpdate("CREATE DATABASE IF NOT EXISTS `$databaseName`")
         }
     }
-    val client = momosetkn.liquibase.client.LiquibaseClient {}
-    client.update(
+    configureLiquibase {
+        global {
+            general {
+                showBanner = false
+            }
+        }
+    }
+    val database = LiquibaseDatabaseFactory.create(
         driver = "com.mysql.cj.jdbc.Driver",
         url = "$connectionUrl/$databaseName",
         username = username,
         password = password,
-        changelogFile = "compiledchangelogs.DatabaseChangelogAll",
     )
-    exitProcess(0) // shutdown for LiquibaseCommandExecutor
+    val client = momosetkn.liquibase.client.LiquibaseClient(
+        changeLogFile = "compiledchangelogs.DatabaseChangelogAll",
+        database = database,
+    )
+    client.update()
+
 }

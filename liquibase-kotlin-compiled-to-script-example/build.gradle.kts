@@ -9,6 +9,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven { url = uri("https://jitpack.io") }
 }
 
@@ -22,7 +23,7 @@ dependencies {
     implementation("com.mysql:mysql-connector-j:9.0.0")
     implementation("org.slf4j:slf4j-simple:2.0.16")
 
-    val liquibaseKotlinVersion = "0.6.0"
+    val liquibaseKotlinVersion = "0.7.0-SNAPSHOT"
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
     implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-client:$liquibaseKotlinVersion")
     // compiled
