@@ -1,7 +1,6 @@
 import momosetkn.liquibase.client.LiquibaseDatabaseFactory
 import momosetkn.liquibase.client.configureLiquibase
 import java.sql.DriverManager
-import kotlin.system.exitProcess
 
 fun main() {
     val connectionUrl = "jdbc:mysql://localhost:3316"
