@@ -10,7 +10,6 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     mavenLocal()
-    maven { url = uri("https://jitpack.io") }
 }
 
 application {
@@ -22,15 +21,15 @@ dependencies {
     implementation("com.mysql:mysql-connector-j:9.0.0")
     implementation("org.slf4j:slf4j-simple:2.0.16")
 
-    val liquibaseKotlinVersion = "0.7.0-SNAPSHOT"
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-client:$liquibaseKotlinVersion")
+    val liquibaseKotlinVersion = "4.29.2-0.8.0"
+    implementation("io.github.momosetkn:liquibase-kotlin-dsl:$liquibaseKotlinVersion")
+    implementation("io.github.momosetkn:liquibase-kotlin-client:$liquibaseKotlinVersion")
     // compiled
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-compiled-parser:$liquibaseKotlinVersion")
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-compiled-serializer:$liquibaseKotlinVersion")
+    implementation("io.github.momosetkn:liquibase-kotlin-compiled-parser:$liquibaseKotlinVersion")
+    implementation("io.github.momosetkn:liquibase-kotlin-compiled-serializer:$liquibaseKotlinVersion")
     // script
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-parser:$liquibaseKotlinVersion")
-    implementation("com.github.momosetkn.liquibase-kotlin:liquibase-kotlin-script-serializer:$liquibaseKotlinVersion")
+    implementation("io.github.momosetkn:liquibase-kotlin-script-parser:$liquibaseKotlinVersion")
+    implementation("io.github.momosetkn:liquibase-kotlin-script-serializer:$liquibaseKotlinVersion")
 
 }
 
